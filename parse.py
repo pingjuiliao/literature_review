@@ -8,7 +8,7 @@ PWD = "."
 MARKDOWN_FILENAME="REVIEW.md"
 FLAG = b"### flags"
 FLAG_SEC = b"### flags"
-WRITE_TO="./RESULT.md"
+WRITE_TO="./SUMMARY.md"
 
 TOP_CONFERENCE = ["IEEE S&P", "ACM CCS", "USENIX", "NDSS"]
 JOURNAL = ["IEEE Access", "IEEE IoT Journal"]
