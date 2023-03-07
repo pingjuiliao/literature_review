@@ -80,12 +80,18 @@ def is_queried(filepath, query):
 def write_to_result(filepath):
     print("writing...", filepath)
     with open(filepath, "rb") as f:
-        b_str = f.read()
-        b_str = b_str[:b_str.find(FLAG)]
+        content = f.read()
+        content = content[:content.find(FLAG)]
         f.close()
 
+    design_sec_idx = content.find(b"- Design:")
+    if design_sec_idx >= 0:
+        part_a = content[:design_sec_idx]
+        part_b = content[content.find(b"- Result:"):]
+        content = part_a + part_b
+
     with open(WRITE_TO, "ab") as f:
-        f.write(b_str)
+        f.write(content)
         f.close()
 
 def parse_markdown(query):
