@@ -25,3 +25,18 @@
     - We can reuse any EHD and return address pair.
   - Encrypting the instruction that are in the set of the legal branch targets is interesting.
     - However, a loop might have to decrypt and then encrypt every time-> performance overhead
+
+### flags
+```
+{
+  "conference": "IEEE IoT Journal",
+  "year": "2018",
+  "keywords": [
+    "IoT",
+    "Forward-edge CFI",
+    "Backward-edge CFI",
+    "CFI",
+    "PUF"
+  ]
+}
+```
