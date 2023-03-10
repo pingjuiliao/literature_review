@@ -3,7 +3,7 @@
 - Method: a framework that extends Intel CET for memory isolation scheme to make CPI, CFIXX, and JIT compilers practical.
 - Result: lossless compression method of CPI incurs 4.05% and 3.97% overhead on SPEC 2006 and SPEC 2017 respectively. Overall, it's a better isolation scheme than Intel MPK.
 - Future work:
-  - Integrate with more work.
+  - Integrate with more work other than CPI.
 
 
 ### flags
