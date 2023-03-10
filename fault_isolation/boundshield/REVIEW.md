@@ -17,6 +17,9 @@
   - MPX + The trampoline mechanism limited execution-based memory disclosure.
     - full function reuse is still possible.
     - execution-based memory disclosure is frustrated by information hiding.
+  - Problem with MPX
+    - say, the program let user input an integer, MPX should not bound-checking that.
+    - However, if not checking, we are leaving an effective code pointer on the stack.
   - the bound checking mechanism can be exploited to reduce the entropy of code region.
     - we can probably learn the upper-bound and the-lower bound by control-flow hijacking
   - the Same model using Intel CET since that MPX is not supported.
