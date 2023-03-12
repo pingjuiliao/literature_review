@@ -7,6 +7,7 @@
   - Decryption is then performed within the CPU, instruction by instruction, just in time for execution.
   - The sponge-based AE cipher uses an internal state z , which provides the foundation for the CFI protection in SCFP.
 - Limitation:
+  - The backward edges are limited to all the possible set. Therefore, it does not provide backward-edge CFI security.
   - Indirect calls/jumps are hard to pre-determine at compile time. So, this work over-approximates the possible branches.
 - Result: The work is secure against code reuse attack and fault attack. On the C benchmark-several programs in PULPino, SCFP incurs 19.8% and 9.1% on code size overhead and performance overhead respectively.
 - Future work: 
@@ -20,7 +21,6 @@
     "IoT",
     "Forward-edge CFI",
     "CFI",
-    "Backward-edge CFI",
     "Fault Attack"
   }
 }
