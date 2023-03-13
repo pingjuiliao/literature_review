@@ -10,6 +10,8 @@ FLAG = b"### flags"
 FLAG_SEC = b"### flags"
 WRITE_TO="./SUMMARY.md"
 
+written_count = 0
+
 TOP_CONFERENCE = ["IEEE S&P", "ACM CCS", "USENIX", "NDSS"]
 JOURNAL = ["IEEE Access", "IEEE IoT Journal"]
 
@@ -78,6 +80,7 @@ def is_queried(filepath, query):
     return True
 
 def write_to_result(filepath):
+    global written_count
     print("writing...", filepath)
     with open(filepath, "rb") as f:
         content = f.read()
@@ -93,6 +96,7 @@ def write_to_result(filepath):
     with open(WRITE_TO, "ab") as f:
         f.write(content)
         f.close()
+    written_count += 1
 
 def parse_markdown(query):
     for root, dirs, files in os.walk(PWD):
@@ -135,6 +139,7 @@ def main():
     if query and os.path.exists(WRITE_TO):
         os.unlink(WRITE_TO)
     parse_markdown(query)
+    print("{} papers written".format(written_count))
 
 
 if __name__ == '__main__':
