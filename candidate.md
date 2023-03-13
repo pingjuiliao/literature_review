@@ -17,3 +17,7 @@ Sensing and Reversible Color Transformation
 ## Reducing Attack Surface via Executable Transformation
 
 ## A Survey of Research on Runtime Rerandomization Under Memory Disclosure
+
+## Armanuzzaman, Md, and Ziming Zhao. "Byotee: Towards building your own trusted execution environments using fpga." arXiv preprint arXiv:2203.04214 (2022).
+
+## Zou, Changwei, et al. "Buddy stacks: Protecting return addresses with efficient thread-local storage and runtime re-randomization." ACM Transactions on Software Engineering and Methodology (TOSEM) 31.2 (2022): 1-37.
