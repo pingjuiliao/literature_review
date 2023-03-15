@@ -28,7 +28,7 @@
 {
   "conference": "ASPLOS",
   "year": "2022",
-  "keyword": [
+  "keywords": [
     "IoT",
     "Debloating",
     "Program Analysis"

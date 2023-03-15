@@ -7,6 +7,7 @@
     - before calling any function, the SR will XOR the assigned hard-coded ID associated with the return address.
     - at each return, a return address lookup is performed via *lookup_table[SR]*
     - after returning from a function, the SR is XORed again to set SR back to current function.
+    - indirect calls are handled via allowed set of jump targets in the table.
   - Exception handlers execute in privileged mode, and can execute asynchronously. Therefore, enforcing the RAI property for a function called within an exception handler requires more than just protecting return addresses. To overcome this limitation, µRAI enforces SFI on sensitive privileged Memory Mapped I/O (MMIO) such as the MPU, in addition to encoding SR. Enforcing SFI within an exception handler context only has negligible overhead since these are only a limited portion of the entire application.
 - Limitation:
   - path explosion problem could blow up the list of return addresses.
@@ -23,7 +24,7 @@
   "year": "2020",
   "keywords": [
     "IoT",
-    "Backward-CFI",
+    "Backward-edge CFI",
     "CFI"    
   ]
 }

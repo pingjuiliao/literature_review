@@ -67,6 +67,10 @@ def is_queried(filepath, query):
         print("file {} failed in JS format".format(filepath))
         quit()
 
+    if 'keywords' not in js or 'conference' not in js or 'year' not in js:
+        print(filepath, "does not have correct JSON format")
+        quit()
+
     if query.conference and js['conference'] not in query.conference:
         return False
     if js['conference'] in query.exclude_conf:
