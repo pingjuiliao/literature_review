@@ -5,7 +5,7 @@ My literature review of security paper, mostly defense mechanism against memory 
 The parser parse all the reviewed topics and organized them based on keywords, conferences, and published years. The result of the parser will be dumped into "./SUMMARY.md" here.
 
 Usage: 
-Search for specific topic
+Search for specific topics
 ```
 ./parse.py --keyword "Shadow Stack" "CFI"
 # or ./parse.py -k "Shadow Stack" "CFI"
