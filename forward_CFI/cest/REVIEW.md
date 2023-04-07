@@ -12,7 +12,6 @@
       - The edge regulator delivers the allowed control flow transfer and jump back into the application.
   - For backward-edge CFI, CEST uses shadow stack within the secure region
   - A secure region(TrustZone) gate is employed.
-  - CEST perfom
 - Result: CEST secures the shadow stack and function info table by locating the assets of CEST in the ARM TZ-M. Moreover, CEST provides binary compatibility considering the characteristic of the embedded system environments that use various compile environments and tools. CEST used the control deliverer instead of SVC used in existing studies to reduce the execution time. Through efficient design, the performance improvement is approximately 40.76% compared to the implementation through SVC.
 - Future Work:
   - Debug symbols may be missing in the binary, **a function identification analysis** can help.
