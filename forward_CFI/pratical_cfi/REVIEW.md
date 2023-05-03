@@ -47,10 +47,11 @@
         - JIT code
         - some exterenal functions can return external function pointers. e.g. <em>dlsym</em>, <em>sigaction</em>
         - some functions can be passed to external libraries and can be called there with external function pointers.
-      - A flexible version of IFCC uses customed
-        - "Insteead fo dfunctions being forced into the appropriate jump table, they are checked using the smae code sequences as VTV"
+      - A compilation-compatible version of IFCC uses customed failure function for such issue.
+        - "Insteead fo dfunctions being forced into the appropriate jump table, they are checked using the same code sequences as VTV"
         - "This version of IFCC addes a comparison, a jump and function call to the inserted instruction sequence"
         - I assume that an additional check is made before referring its jump table.
+    - A large portion of this paper addresses the problems associated with compatibility.
       
 ### flags
 ```
